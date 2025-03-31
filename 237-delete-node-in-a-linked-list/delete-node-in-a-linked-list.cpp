@@ -8,15 +8,12 @@
  */
 class Solution {
 public:
-    void deleteNode(ListNode* curr) {
-         while(curr->next) {
-            curr->val = curr->next->val;
-            if(curr->next->next) {
-                curr = curr->next;
-            } else {
-                curr->next= NULL;
-            }
+    void deleteNode(ListNode* Node) {
+        Node -> val = Node ->next -> val;
+        Node->next = Node -> next -> next;
+
+
+
         }
-    }
     
 };
