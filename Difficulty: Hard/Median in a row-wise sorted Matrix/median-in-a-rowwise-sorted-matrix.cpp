@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    int median(vector<vector<int>> &mat) {
+        // code here
+         int n = mat.size();
+        int m = mat[0].size();
+        vector<int>ans;
+        
+      for(int i = 0 ; i< n ; i++){
+          for(int j = 0 ; j < m ; j++)
+          ans.push_back(mat[i][j]);
+      }
+      sort(ans.begin(),ans.end());
+      int mid = (n*m)/2;
+      return ans[mid];
+        
+        
+    }
+};
